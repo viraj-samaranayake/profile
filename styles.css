@@ -1,0 +1,128 @@
+/* Global Styles */
+body {
+  scroll-behavior: smooth; /* Smooth scrolling for navigation */
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Adding Fade-in Animation to Sections */
+section {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Styling Form Elements for Contact Section */
+input, textarea {
+  outline: none;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+  border-color: #3b82f6; /* Tailwind Blue */
+}
+
+/* Theme-Specific Customization */
+[data-theme="dark"] {
+  --bg-primary: #1a202c;
+  --text-primary: #edf2f7;
+}
+
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --text-primary: #74829b;
+}
+
+/* Applying Theme Colors */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+
+
+
+/* Hover Effect for Skill Items */
+/* .flex.items-center:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}   */
+
+/* Add a subtle shadow */
+.flex.items-center {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Contact Icons Hover */
+
+/* a:hover {
+  color: #62adca;
+} */
+
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* Button Hover Effect */
+a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+
+
+
+/* Global Container Padding */
+.container {
+  padding-left: 1rem;  /* px-4 */
+  padding-right: 1rem; /* px-4 */
+}
+
+/* Larger Screens */
+@media (min-width: 768px) {
+  .container {
+      padding-left: 2rem;  /* md:px-8 */
+      padding-right: 2rem; /* md:px-8 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+      padding-left: 4rem;  /* lg:px-16 */
+      padding-right: 4rem; /* lg:px-16 */
+  }
+}
+
+
+
+/* Hover Effect for Social Icons */
+footer a img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Footer Icon Spacing */
+footer a img {
+  margin: 0 0.5rem;
+}
+
+
+
