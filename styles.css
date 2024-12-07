@@ -20,24 +20,13 @@ section {
   animation: fadeIn 1s ease-in-out;
 }
 
-/* Styling Form Elements for Contact Section */
-input, textarea {
-  outline: none;
-  border: 2px solid transparent;
-  transition: border-color 0.3s ease-in-out;
-}
-
-input:focus, textarea:focus {
-  border-color: #3b82f6; /* Tailwind Blue */
-}
-
 /* Theme-Specific Customization */
-[data-theme="dark"] {
+[data-theme='dark'] {
   --bg-primary: #1a202c;
   --text-primary: #edf2f7;
 }
 
-[data-theme="light"] {
+[data-theme='light'] {
   --bg-primary: #ffffff;
   --text-primary: #74829b;
 }
@@ -48,21 +37,54 @@ body {
   color: var(--text-primary);
 }
 
-
-
-
 /* Hover Effect for Skill Items */
 /* .flex.items-center:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
 }   */
 
+
+
+
+/* Skill Card Styling */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f2937; /* Dark background */
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Elevated shadow on hover */
+}
+
+.skill-card i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover i {
+  transform: scale(1.2); /* Icon zoom effect on hover */
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .skill-card {
+    padding: 1.2rem;
+  }
+}
+
+
+
+
 /* Add a subtle shadow */
 .flex.items-center {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-
 
 /* Contact Icons Hover */
 
@@ -78,8 +100,6 @@ img:hover {
   transform: scale(1.1);
 }
 
-
-
 /* Button Hover Effect */
 a:hover {
   transform: translateY(-2px);
@@ -87,42 +107,55 @@ a:hover {
   transition: all 0.3s ease;
 }
 
-
-
-
 /* Global Container Padding */
 .container {
-  padding-left: 1rem;  /* px-4 */
+  padding-left: 1rem; /* px-4 */
   padding-right: 1rem; /* px-4 */
 }
 
 /* Larger Screens */
 @media (min-width: 768px) {
   .container {
-      padding-left: 2rem;  /* md:px-8 */
-      padding-right: 2rem; /* md:px-8 */
+    padding-left: 2rem; /* md:px-8 */
+    padding-right: 2rem; /* md:px-8 */
   }
 }
 
 @media (min-width: 1024px) {
   .container {
-      padding-left: 4rem;  /* lg:px-16 */
-      padding-right: 4rem; /* lg:px-16 */
+    padding-left: 4rem; /* lg:px-16 */
+    padding-right: 4rem; /* lg:px-16 */
   }
 }
 
-
-
-/* Hover Effect for Social Icons */
-footer a img:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
+/* General Style for Social Card */
+.social-card a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #2d2d2d; /* Default Dark Background */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle Shadow */
+  color: white; /* Default icon color */
+  font-size: 1.25rem; /* Icon size */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Footer Icon Spacing */
-footer a img {
-  margin: 0 0.5rem;
+.social-card a:hover {
+  transform: scale(1.1); /* Hover Zoom Effect */
 }
 
+/* Individual Hover Colors */
+.social-card a:hover.whatsapp {
+  background-color: #25d366; /* WhatsApp Green */
+}
 
+.social-card a:hover.email {
+  background-color: #007bff; /* Email Blue */
+}
 
+.social-card a:hover.linkedin {
+  background-color: #2867b2; /* LinkedIn Blue */
+}
